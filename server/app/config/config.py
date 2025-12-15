@@ -9,7 +9,7 @@ load_dotenv()
 class Settings:
     # -------------------- DATABASE CONFIG --------------------
     MONGO_URI: str = os.getenv("MONGO_URI")
-    DB_NAME: str = os.getenv("DB_NAME", "auth_db")
+    DB_NAME: str = os.getenv("DB_NAME", "DB_name")
 
     # -------------------- AUTH CONFIG --------------------
     JWT_SECRET: str = os.getenv("JWT_SECRET", "supersecret")
@@ -18,7 +18,7 @@ class Settings:
     # -------------------- GEMINI CONFIG --------------------
     GEMINI_API_KEY: str = os.getenv(
         "GEMINI_API_KEY",
-        "AIzaSyCOELxYnV-CjqwdU-zcsqwOvPI1jDM-ejc"
+        "Your-api-key"
     )
 
     llm: ChatGoogleGenerativeAI = ChatGoogleGenerativeAI(
@@ -30,14 +30,14 @@ class Settings:
     # -------------------- EMAIL CONFIG --------------------
     SMTP_HOST: str = os.getenv("SMTP_HOST", "smtp.gmail.com")
     SMTP_PORT: int = int(os.getenv("SMTP_PORT", 587))
-    SMTP_USER: str = os.getenv("SMTP_USER", "yashu18203@gmail.com")
-    SMTP_PASSWORD: str = os.getenv("SMTP_PASSWORD", "jmdqkxyfxjwxejky")
+    SMTP_USER: str = os.getenv("SMTP_USER", "your_gmail")
+    SMTP_PASSWORD: str = os.getenv("SMTP_PASSWORD", "your_app_password")
     SMTP_TLS: bool = os.getenv("SMTP_TLS", "True").lower() in ("true", "1")
 
     # -------------------- APOLLO.IO CONFIG --------------------
     APOLLO_API_KEY: str = os.getenv(
         "APOLLO_API_KEY",
-        "r2JLI-uBlauYLwqtU99bbg"
+        "Your-key"
     )
 
     # -------------------- FOLDER CONFIG --------------------
